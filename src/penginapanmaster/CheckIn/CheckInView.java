@@ -114,6 +114,11 @@ public class CheckInView extends javax.swing.JFrame {
         });
 
         btnBatal.setText("Batal");
+        btnBatal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBatalActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -264,6 +269,11 @@ public class CheckInView extends javax.swing.JFrame {
     private void txtClassRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtClassRoomActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtClassRoomActionPerformed
+
+    private void btnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatalActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+    }//GEN-LAST:event_btnBatalActionPerformed
 
    
 

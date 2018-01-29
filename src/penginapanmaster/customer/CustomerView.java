@@ -253,7 +253,7 @@ public class CustomerView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       setVisible(false);
+       this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed

@@ -4,12 +4,8 @@
  * and open the template in the editor.
  */
 package penginapanmaster.CheckOut;
-
-
-import penginapanmaster.CheckIn.*;
 import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
-import penginapanmaster.Booking.DatabaseBooking;
 
 /**
  *
@@ -109,6 +105,11 @@ public class CheckOutView extends javax.swing.JFrame {
         });
 
         btnBatal.setText("Batal");
+        btnBatal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBatalActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -254,6 +255,11 @@ public class CheckOutView extends javax.swing.JFrame {
             System.out.println(e.getMessage());
         }
     }//GEN-LAST:event_btnProsesActionPerformed
+
+    private void btnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatalActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+    }//GEN-LAST:event_btnBatalActionPerformed
 
    
 

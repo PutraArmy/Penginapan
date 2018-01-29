@@ -4,13 +4,11 @@
  * and open the template in the editor.
  */
 package penginapanmaster.customer;
-import penginapanmaster.MVPPresenter;
-
 /**
  *
  * @author Lukman
  */
-public class CustomerPresenter extends MVPPresenter{
+public class CustomerPresenter{
     
      public static void getCustomer() {      
         CustomerView cs = new CustomerView();

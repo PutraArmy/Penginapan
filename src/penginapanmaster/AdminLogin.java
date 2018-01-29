@@ -5,19 +5,19 @@
  */
 package penginapanmaster;
 
+import javax.swing.JOptionPane;
 import penginapanmaster.customer.CustomerPresenter;
 
 /**
  *
  * @author Army
  */
-public class AdminLogin extends javax.swing.JDialog {
+public class AdminLogin extends javax.swing.JFrame {
 
     /**
      * Creates new form AdminLogin
      */
-    public AdminLogin(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
+    public AdminLogin() {
         initComponents();
     }
 
@@ -113,16 +113,13 @@ public class AdminLogin extends javax.swing.JDialog {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         String user = txtUsername.getText();
         String pass = txtPass.getText();
-//        String user = txtUsername.getText();
-//        String pass = txtPass.getText();
-        System.out.println(user);
-        System.out.println(pass);
+
         if ("admin".equals(user) && "admin".equals(pass)){
-            CustomerPresenter.getCustomer();
-            setVisible(false);
+            AdminControlPanel acp = new AdminControlPanel();
+            acp.setVisible(true);
         }
         else {
-            System.out.println("salah");
+            JOptionPane.showMessageDialog(null, "USER DAN PASSWORD ANDA SALAH");
             txtUsername.setText("");
             txtPass.setText("");
         }
@@ -132,6 +129,7 @@ public class AdminLogin extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPassActionPerformed
 
+<<<<<<< HEAD
     /**
      * @param args the command line arguments
      */
@@ -173,6 +171,9 @@ public class AdminLogin extends javax.swing.JDialog {
             }
         });
     }
+=======
+   
+>>>>>>> MainView
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancel;
