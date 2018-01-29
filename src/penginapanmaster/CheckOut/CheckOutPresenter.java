@@ -5,8 +5,6 @@
  */
 package penginapanmaster.CheckOut;
 
-import penginapanmaster.CheckIn.*;
-
 /**
  *
  * @author Lukman
@@ -15,7 +13,6 @@ public class CheckOutPresenter {
     
     DatabaseCheckOut db = new DatabaseCheckOut();
     public static void getCheckOut() {      
-//        RoomView r = new RoomView();
         CheckOutView c = new CheckOutView();
         c.setVisible(true);
        

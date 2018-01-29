@@ -13,8 +13,5 @@ public class RoomPresenter {
      public static void getRoom() {      
         RoomView r = new RoomView();
         r.setVisible(true);
-        r.setResizable(false);
-        r.setTitle("Oleg Hotel");
-        r.setLocationRelativeTo(null);
     }  
 }

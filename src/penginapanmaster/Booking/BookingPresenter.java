@@ -11,7 +11,7 @@ package penginapanmaster.Booking;
  * @author Army
  */
 public class BookingPresenter {
-    public static void getCheckIn() {      
+    public static void getBooking() {      
         BookingView r = new BookingView();
         r.setVisible(true);
         r.setResizable(false);

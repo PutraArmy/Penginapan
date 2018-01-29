@@ -7,6 +7,7 @@ package penginapanmaster;
 
 import penginapanmaster.CheckIn.CheckInPresenter;
 import penginapanmaster.CheckOut.CheckOutPresenter;
+import penginapanmaster.customer.CustomerPresenter;
 /**
  *
  * @author Lukman
@@ -17,9 +18,12 @@ public class PenginapanMaster {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+       MainView mv = new MainView();
+       mv.setVisible(true);
+// CustomerPresenter.getCustomer();
         //MainPresenter.getMain();
 //        BookingPresenter.getCheckIn();
-        CheckInPresenter.getCheckIn();
+//        CheckInPresenter.getCheckIn();
 //        RoomPresenter.getRoom();
 //        CheckOutPresenter.getCheckOut();
         //CustomerPresenter.getCustomer();
