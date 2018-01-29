@@ -265,7 +265,7 @@ public class CustomerUpdateView extends javax.swing.JDialog {
     }//GEN-LAST:event_btnBatalActionPerformed
 
     private void btnProsesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProsesActionPerformed
-        JK = (String)cbJK.getSelectedItem();
+
         db.update_customer(Integer.parseInt(txtID.getText()), new Customer(txtNama.getText(), txtNoIdentitas.getText(),txtAlamat.getText(),JK,txtEmail.getText(),txtUsia.getText()));
         JOptionPane.showMessageDialog(null, "Data Berhasil diUpdate");
         setVisible(false);

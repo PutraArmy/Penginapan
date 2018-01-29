@@ -72,7 +72,7 @@ public class DatabaseRoom {
         return list;
     }
     
-     public void tambah_room(Room c){
+    public void tambah_room(Room c){
         Connection conn = null;
         Statement stmt = null;
         int banyak = 1;

@@ -276,9 +276,9 @@ public class CustomerView extends javax.swing.JFrame {
 
     
     public void refreshData(){
-            tCustomer.setData(db.tampil_seluruh_customer());
-            tCustomer.fireTableDataChanged();
-            tblCustomer.changeSelection(0, 0, false, false);
+        tCustomer.setData(db.tampil_seluruh_customer());
+        tCustomer.fireTableDataChanged();
+        tblCustomer.changeSelection(0, 0, false, false);
     }
     
 
