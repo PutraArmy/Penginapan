@@ -3,6 +3,25 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/Booking/DatabaseBooking.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/CheckIn/CheckInPresenter.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/CheckIn/DatabaseCheckIn.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/room/RoomTableModel.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/MainPresenter.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/CheckIn/CheckInView.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/room/Room.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/room/RoomEditView.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/Booking/BookingView.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/room/RoomView.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/Booking/BookingPresenter.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/MainView.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/CheckIn/CheckIn.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/room/DatabaseRoom.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/PenginapanMaster.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/room/RoomPresenter.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/Booking/Booking.java</file>
+=======
             <file>file:/home/my/Dokumen/Penginapan/src/penginapanmaster/MVPContract.java</file>
             <file>file:/home/my/Dokumen/Penginapan/src/penginapanmaster/Booking/Booking.java</file>
             <file>file:/home/my/Dokumen/Penginapan/src/penginapanmaster/room/RoomView.java</file>
@@ -16,6 +35,7 @@
             <file>file:/home/my/Dokumen/Penginapan/src/penginapanmaster/customer/DatabaseCustomer.java</file>
             <file>file:/home/my/Dokumen/Penginapan/src/penginapanmaster/customer/CustomerTableModel.java</file>
             <file>file:/home/my/Dokumen/Penginapan/src/penginapanmaster/Booking/BookingAdminView.java</file>
+>>>>>>> Armybrance
         </group>
     </open-files>
 </project-private>

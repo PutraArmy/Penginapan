@@ -8,8 +8,10 @@ package penginapanmaster.Booking;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import penginapanmaster.CheckIn.CheckIn;
 import penginapanmaster.customer.Customer;
 
 /**
@@ -22,6 +24,7 @@ public class DatabaseBooking {
     public final String url     = "jdbc:mysql://localhost/db_penginapan";
     public final String user    = "root";
     public final String pass    = "";
+    Booking bk = null;
     
     public ArrayList<Booking> tampil_seluruh_booking() {
         
@@ -122,8 +125,8 @@ public class DatabaseBooking {
                     +" id_booking = '"+c.getId_booking()+"'"
                     +", id_customer = '"+c.getId_customer()+"'"
                     +", id_room = '"+c.getId_room()+"'"
-                    +", checkin = '"+c.getCheck_in()+"'"
-                    +", checkout = '"+c.getCheck_out()+"'"
+                    +", check_in = '"+c.getCheck_in()+"'"
+                    +", check_out = '"+c.getCheck_out()+"'"
                     +", lama = '"+c.getLama()+"'"
                     +", total = '"+c.getTotal()+"'"
                     +"where id_booking ='"+c.getId_booking()+"'";
@@ -134,7 +137,7 @@ public class DatabaseBooking {
         } 
     }
     
-    public void pilih_room(int ID){
+    public String pilih_room(int ID){
         Connection conn = null;
         Statement stmt = null;
         
@@ -143,12 +146,37 @@ public class DatabaseBooking {
             conn = DriverManager.getConnection(url, user, pass);
             stmt = conn.createStatement();
             String sql;
-            sql = "Select from room where id_room ='"+ID+"'";
+            sql = "Select class_room from room where id_room ='"+ID+"'";
             ResultSet rs = stmt.executeQuery(sql);
            
-            rs.getString("class_room");
+            return rs.getString("class_room");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         } 
+        return null;
+    }
+    
+    public Booking selectBooking(int id){
+        Connection conn = null;
+        Statement stmt = null;
+        try {
+            Class.forName(driver);
+            conn = DriverManager.getConnection(url, user, pass);
+            stmt = conn.createStatement();
+            
+            
+            String sql;
+            sql = "select * from booking inner join customer on customer.id_customer = booking.id_booking inner join room on room.id_room = booking.id_room WHERE id_booking ="+id ;
+            ResultSet rs = stmt.executeQuery(sql);
+        
+            
+            while(rs.next()){
+                this.bk = new Booking(
+                    rs.getString("class_room"));
+            }
+         } catch (ClassNotFoundException | SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return bk;
     }
 }

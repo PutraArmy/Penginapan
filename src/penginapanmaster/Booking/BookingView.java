@@ -328,6 +328,7 @@ public class BookingView extends javax.swing.JFrame {
         SimpleDateFormat format = new SimpleDateFormat(tampilan);
         tglcheckIn = String.valueOf(format.format(dateCheckIn.getDate()));
         tglcheckOut = String.valueOf(format.format(dateCheckOut.getDate()));
+//        txtHarga.setText(Long.toString(10000));
         try{
             SimpleDateFormat df = new SimpleDateFormat(tampilan);
             checkIn = df.parse(tglcheckIn);
@@ -351,7 +352,7 @@ public class BookingView extends javax.swing.JFrame {
             }
             long total = harga * lama;
             txtHarga.setText(Long.toString(total));
-        }
+    }
         catch (Exception e){
                 System.out.println(""+ e.getMessage());
           }
