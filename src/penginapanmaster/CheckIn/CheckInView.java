@@ -61,7 +61,7 @@ public class CheckInView extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Check In");
 
-        jLabel2.setText("ID Booking");
+        jLabel2.setText("ID ORDER");
 
         btnSearch.setText("Search");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
