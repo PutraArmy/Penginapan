@@ -219,6 +219,9 @@
     <Component class="javax.swing.JTextField" name="txtNoRoom">
     </Component>
     <Component class="javax.swing.JTextField" name="txtClassRoom">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtClassRoomActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>
@@ -237,7 +240,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnProses">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Proses"/>
+        <Property name="text" type="java.lang.String" value="CheckIn"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnProsesActionPerformed"/>

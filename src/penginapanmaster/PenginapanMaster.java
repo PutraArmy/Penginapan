@@ -5,10 +5,8 @@
  */
 package penginapanmaster;
 
-import penginapanmaster.Booking.BookingPresenter;
 import penginapanmaster.CheckIn.CheckInPresenter;
-import penginapanmaster.customer.CustomerPresenter;
-import penginapanmaster.room.RoomPresenter;
+import penginapanmaster.CheckOut.CheckOutPresenter;
 /**
  *
  * @author Lukman
@@ -23,6 +21,7 @@ public class PenginapanMaster {
 //        BookingPresenter.getCheckIn();
         CheckInPresenter.getCheckIn();
 //        RoomPresenter.getRoom();
+//        CheckOutPresenter.getCheckOut();
         //CustomerPresenter.getCustomer();
         //CustomerPresenter.getCustomer();
 
