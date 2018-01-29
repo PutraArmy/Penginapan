@@ -61,6 +61,7 @@ public class DatabaseRoom {
             ResultSet rs = stmt.executeQuery(sql);
             
             while(rs.next()){
+                
                 list.add(new Room(rs.getInt("id_room"),rs.getInt("no_room"),rs.getString("class_room"),rs.getString("status")));
             }
         } 
@@ -140,9 +141,7 @@ public class DatabaseRoom {
             int classR;
             
             sql = "UPDATE `room` SET `no_room` = '"+noR+"', `class_room`='"+ccb+"', `status` = '"+scb+"' WHERE `room`.`id_room` = "+id;
-//    sql = "UPDATE `room` SET `class_room` = '"+ccb+"' WHERE `room`.`id_room` = "+id;
-//            sql = "UPDATE room SET class_room='"+ccb+"' WHERE id_room="+id;
-        
+      
         stmt.executeUpdate(sql);
            
         } catch (Exception e) {

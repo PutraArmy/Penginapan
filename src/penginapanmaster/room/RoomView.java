@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package penginapanmaster.room;
+import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
 
 /**
@@ -168,11 +169,13 @@ public class RoomView extends javax.swing.JFrame {
                     "Apakah anda yakin",JOptionPane.DEFAULT_OPTION,JOptionPane.WARNING_MESSAGE,null,pilihan,pilihan[0]
             );
             
+            
+            
             if(jawaban==0){
                 db.delete_room(id);
             }
             refreshData();
-        } catch (Exception e) {
+        } catch (HeadlessException e) {
             System.out.println(e.getMessage());
         }
     }//GEN-LAST:event_deleteButtonActionPerformed
