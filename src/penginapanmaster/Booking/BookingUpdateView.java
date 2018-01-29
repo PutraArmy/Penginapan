@@ -19,6 +19,7 @@ public class BookingUpdateView extends javax.swing.JDialog {
     BookingTableModel tBooking = new BookingTableModel();
     DatabaseBooking dbBook = new DatabaseBooking(); 
     int ID;
+    int ID_Booking;
     long harga, lama;
     Date checkIn, checkOut;
     String class_room;
@@ -233,19 +234,15 @@ public class BookingUpdateView extends javax.swing.JDialog {
         try {
             //ambil baris dimana kursor berada
             int baris = tblBooking.getSelectedRow();
-            int ID_Booking = (int)tBooking.getValueAt(baris, 0);
+            ID_Booking = (int)tBooking.getValueAt(baris, 0);
             int ID_Customer = (int)tBooking.getValueAt(baris, 1);
             int ID_Room = (int)tBooking.getValueAt(baris, 2);
-            String CheckIn = (String)tBooking.getValueAt(baris, 3);
-            String CheckOut = (String)tBooking.getValueAt(baris, 4);
             int Lama = (int)tBooking.getValueAt(baris, 5);
             int Total = (int)tBooking.getValueAt(baris, 6);
-
+            this.ID_Booking = ID_Booking;
             txtIDBooking.setText(Integer.toString(ID_Booking));
             txtIDCustomer.setText(Integer.toString(ID_Customer));
             txtIDRoom.setText(Integer.toString(ID_Room));
-//            txtCheckIn.setText(CheckIn);
-//            txtCheckOut.setText(CheckOut);
             txtLama.setText(Integer.toString(Lama));
             txtTotal.setText(Integer.toString(Total));
         }
@@ -288,10 +285,9 @@ public class BookingUpdateView extends javax.swing.JDialog {
             long kembali1 = checkOut.getTime();
             long diff = kembali1-pinjam1;
             lama = diff/(24*60*60*1000);
-            txtLama.setText(Long.toString(lama)+" Hari");
-            
-            pilih_Room();
-            switch (class_room) {
+            txtLama.setText(Long.toString(lama));
+            Booking bk = dbBook.selectBooking(ID_Booking);
+            switch (bk.getClass_room()) {
                 case "VIP"          : harga = 1000000;
                                       break;
                 case "Family"       : harga = 750000;
@@ -325,44 +321,6 @@ public class BookingUpdateView extends javax.swing.JDialog {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BookingUpdateView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BookingUpdateView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BookingUpdateView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BookingUpdateView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                BookingUpdateView dialog = new BookingUpdateView(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBatal;

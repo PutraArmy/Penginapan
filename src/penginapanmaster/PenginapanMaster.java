@@ -5,6 +5,7 @@
  */
 package penginapanmaster;
 
+import penginapanmaster.Booking.BookingPresenter;
 import penginapanmaster.CheckIn.CheckInPresenter;
 import penginapanmaster.CheckOut.CheckOutPresenter;
 /**
@@ -18,8 +19,8 @@ public class PenginapanMaster {
      */
     public static void main(String[] args) {
         //MainPresenter.getMain();
-//        BookingPresenter.getCheckIn();
-        CheckInPresenter.getCheckIn();
+       BookingPresenter.getBookingAdmin();
+        //CheckInPresenter.getCheckIn();
 //        RoomPresenter.getRoom();
 //        CheckOutPresenter.getCheckOut();
         //CustomerPresenter.getCustomer();
