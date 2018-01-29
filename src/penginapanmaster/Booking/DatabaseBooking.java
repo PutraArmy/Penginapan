@@ -23,7 +23,7 @@ public class DatabaseBooking {
     public final String user    = "root";
     public final String pass    = "";
     
-    public ArrayList<Booking> tampil_seluruh_booking(int id) {
+    public ArrayList<Booking> tampil_seluruh_booking() {
         
         ArrayList<Booking> list = new ArrayList<Booking>();
         Connection conn = null;
@@ -33,7 +33,7 @@ public class DatabaseBooking {
             Class.forName(driver);
             conn = DriverManager.getConnection(url, user, pass);
             stmt = conn.createStatement();
-            String sql = "Select * from booking where id_booking = id";
+            String sql = "Select * from booking";
             ResultSet rs = stmt.executeQuery(sql);
             
             while(rs.next()){
@@ -91,4 +91,64 @@ public class DatabaseBooking {
         }         
     }
     
+    public void hapus_booking(int ID){
+        Connection conn = null;
+        Statement stmt = null;
+        
+        try {
+            Class.forName(driver);
+            conn = DriverManager.getConnection(url, user, pass);
+            stmt = conn.createStatement();
+            String sql;
+            sql = "delete from booking where id_booking ='"+ID+"'";
+            stmt.executeUpdate(sql);
+           
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }       
+            
+    }
+    
+    public void update_booking(Booking c){
+        Connection conn = null;
+        Statement stmt = null;
+        
+        try {
+            Class.forName(driver);
+            conn = DriverManager.getConnection(url, user, pass);
+            stmt = conn.createStatement();
+            String sql;
+            sql = "UPDATE booking set "
+                    +" id_booking = '"+c.getId_booking()+"'"
+                    +", id_customer = '"+c.getId_customer()+"'"
+                    +", id_room = '"+c.getId_room()+"'"
+                    +", checkin = '"+c.getCheck_in()+"'"
+                    +", checkout = '"+c.getCheck_out()+"'"
+                    +", lama = '"+c.getLama()+"'"
+                    +", total = '"+c.getTotal()+"'"
+                    +"where id_booking ='"+c.getId_booking()+"'";
+            stmt.executeUpdate(sql);
+           
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } 
+    }
+    
+    public void pilih_room(int ID){
+        Connection conn = null;
+        Statement stmt = null;
+        
+        try {
+            Class.forName(driver);
+            conn = DriverManager.getConnection(url, user, pass);
+            stmt = conn.createStatement();
+            String sql;
+            sql = "Select from room where id_room ='"+ID+"'";
+            ResultSet rs = stmt.executeQuery(sql);
+           
+            rs.getString("class_room");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } 
+    }
 }

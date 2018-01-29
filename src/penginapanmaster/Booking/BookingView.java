@@ -28,6 +28,7 @@ public class BookingView extends javax.swing.JFrame {
     DatabaseRoom dbRoom = new DatabaseRoom();
     DatabaseBooking dbBooking = new DatabaseBooking();
     RoomTableModel tRoom = new RoomTableModel();
+    BookingTableModel tBooking = new BookingTableModel();
     
     public BookingView() {
         initComponents();
@@ -300,8 +301,12 @@ public class BookingView extends javax.swing.JFrame {
         dbRoom.status_booked(ID);
         JOptionPane.showMessageDialog(null, "Room Sucesfull to Booked");
         setVisible(false);
+        cek();
     }//GEN-LAST:event_btnProsesActionPerformed
 
+    public boolean cek(){
+        return true;
+    }
     private void txtNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNamaActionPerformed
@@ -401,14 +406,17 @@ public class BookingView extends javax.swing.JFrame {
     }
     
     
+    
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBatal;
     private javax.swing.JButton btnCari;
     private javax.swing.JButton btnProses;
-    private javax.swing.JComboBox<String> cbClassRoom;
-    private javax.swing.JComboBox<String> cbJK;
-    private com.toedter.calendar.JDateChooser dateCheckIn;
-    private com.toedter.calendar.JDateChooser dateCheckOut;
+    public javax.swing.JComboBox<String> cbClassRoom;
+    public javax.swing.JComboBox<String> cbJK;
+    public com.toedter.calendar.JDateChooser dateCheckIn;
+    public com.toedter.calendar.JDateChooser dateCheckOut;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -427,13 +435,13 @@ public class BookingView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable tblRoom;
-    private javax.swing.JTextArea txtAlamat;
-    private javax.swing.JTextField txtEmail;
-    private javax.swing.JTextField txtHarga;
-    private javax.swing.JTextField txtLama;
-    private javax.swing.JTextField txtNama;
-    private javax.swing.JTextField txtNoIdentitas;
-    private javax.swing.JTextField txtUsia;
+    public javax.swing.JTable tblRoom;
+    public javax.swing.JTextArea txtAlamat;
+    public javax.swing.JTextField txtEmail;
+    public javax.swing.JTextField txtHarga;
+    public javax.swing.JTextField txtLama;
+    public javax.swing.JTextField txtNama;
+    public javax.swing.JTextField txtNoIdentitas;
+    public javax.swing.JTextField txtUsia;
     // End of variables declaration//GEN-END:variables
 }
