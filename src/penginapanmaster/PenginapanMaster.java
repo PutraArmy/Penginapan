@@ -23,13 +23,7 @@ public class PenginapanMaster {
        mv.setVisible(true);
 // CustomerPresenter.getCustomer();
         //MainPresenter.getMain();
-<<<<<<< HEAD
-       BookingPresenter.getBookingAdmin();
-        //CheckInPresenter.getCheckIn();
-=======
-//        BookingPresenter.getCheckIn();
-//        CheckInPresenter.getCheckIn();
->>>>>>> MainView
+
 //        RoomPresenter.getRoom();
 //        CheckOutPresenter.getCheckOut();
         //CustomerPresenter.getCustomer();
