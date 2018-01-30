@@ -261,14 +261,14 @@ public class checkOutView extends javax.swing.JFrame {
                db.setUsedRoom(idCustomer);
                JOptionPane.showMessageDialog(null, "Proses Check In Berhasil");
                idBook = Integer.valueOf(txtIDBooking.getText());
-                CheckOutPresenter ck = new CheckOutPresenter();
-                CheckOut dt = ck.selectBooking(idBook); 
-                CheckOutPDF cop = new CheckOutPDF(dt);
+                checkOutPresenter ck = new checkOutPresenter();
+                checkOut dt = ck.selectBooking(idBook); 
+                checkOutPDF cop = new checkOutPDF(dt);
                 cop.createPdf();
         } catch (HeadlessException e) {
             System.out.println(e.getMessage());
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(CheckOutView.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(checkOutView.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnProsesActionPerformed
 

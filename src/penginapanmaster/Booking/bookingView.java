@@ -17,11 +17,7 @@ import penginapanmaster.room.roomTableModel;
  *
  * @author Army
  */
-<<<<<<< HEAD:src/penginapanmaster/Booking/bookingView.java
 public class bookingView extends javax.swing.JFrame {
-=======
-public final class BookingView extends javax.swing.JFrame {
->>>>>>> MainView:src/penginapanmaster/Booking/BookingView.java
 
     int ID;
     long harga, lama;
@@ -330,6 +326,7 @@ public final class BookingView extends javax.swing.JFrame {
         SimpleDateFormat format = new SimpleDateFormat(tampilan);
         tglcheckIn = String.valueOf(format.format(dateCheckIn.getDate()));
         tglcheckOut = String.valueOf(format.format(dateCheckOut.getDate()));
+        System.out.println("cek");
         try{
             SimpleDateFormat df = new SimpleDateFormat(tampilan);
             checkIn = df.parse(tglcheckIn);
@@ -341,22 +338,26 @@ public final class BookingView extends javax.swing.JFrame {
             txtLama.setText(Long.toString(lama)+" Hari");
             
             pilih_Room();
-            switch (class_room) {
-                case "VIP"          : harga = 1000000;
-                                      break;
-                case "Family"       : harga = 750000;
-                                      break;
-                case "Single Bed"   : harga = 250000;
-                                      break;
-                case "Double Bed"   : harga = 500000;
-                                      break;
+            if (class_room == null){
+                JOptionPane.showMessageDialog(null, "Pilih Ruangan terlebih Dahulu");
+            } else {
+                switch (class_room) {
+                    case "VIP"          : harga = 1000000;
+                                          break;
+                    case "Family"       : harga = 750000;
+                                          break;
+                    case "Single Bed"   : harga = 250000;
+                                          break;
+                    case "Double Bed"   : harga = 500000;
+                                          break;
+                }
             }
             long total = harga * lama;
             txtHarga.setText(Long.toString(total));
     }
         catch (Exception e){
-                System.out.println(""+ e.getMessage());
-          }
+            System.out.println(""+ e.getMessage());
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtNoIdentitasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNoIdentitasActionPerformed

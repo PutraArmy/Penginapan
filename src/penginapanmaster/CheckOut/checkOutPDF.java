@@ -21,9 +21,9 @@ import static javax.swing.text.StyleConstants.FontFamily;
  *
  * @author Lukman
  */
-public class CheckOutPDF {
-    private CheckOut dt;
-    public CheckOutPDF (CheckOut dt){
+public class checkOutPDF {
+    private checkOut dt;
+    public checkOutPDF (checkOut dt){
         this.dt = dt;
     }
     
