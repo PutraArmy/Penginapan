@@ -30,6 +30,7 @@ public class CustomerAddView extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel8 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         txtNama = new javax.swing.JTextField();
@@ -48,14 +49,15 @@ public class CustomerAddView extends javax.swing.JDialog {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1000, 600));
         setMinimumSize(new java.awt.Dimension(1000, 600));
-        setPreferredSize(new java.awt.Dimension(1000, 600));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/olegwhite.png"))); // NOI18N
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 140, 100));
+
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
-        jLabel2.setText("Nama");
+        jLabel2.setText("Name");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 24)); // NOI18N
@@ -70,8 +72,8 @@ public class CustomerAddView extends javax.swing.JDialog {
         getContentPane().add(txtNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, 200, -1));
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
-        jLabel3.setText("No Identitas");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, -1, -1));
+        jLabel3.setText("Identity Number");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, 90, -1));
 
         txtNoIdentitas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,7 +83,7 @@ public class CustomerAddView extends javax.swing.JDialog {
         getContentPane().add(txtNoIdentitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, 200, -1));
 
         jLabel4.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
-        jLabel4.setText("Alamat");
+        jLabel4.setText("Address");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, -1, -1));
         getContentPane().add(txtAlamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, 200, -1));
 
@@ -181,6 +183,7 @@ public class CustomerAddView extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     public javax.swing.JTextField txtAlamat;
     public javax.swing.JTextField txtEmail;

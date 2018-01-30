@@ -41,6 +41,7 @@ public class BookingUpdateView extends javax.swing.JDialog {
     private void initComponents() {
 
         jCalendar1 = new com.toedter.calendar.JCalendar();
+        jLabel10 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblBooking = new javax.swing.JTable();
@@ -68,6 +69,9 @@ public class BookingUpdateView extends javax.swing.JDialog {
         setMinimumSize(new java.awt.Dimension(1000, 600));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/olegblack.png"))); // NOI18N
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 160, 90));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 24)); // NOI18N
         jLabel1.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
@@ -298,6 +302,7 @@ public class BookingUpdateView extends javax.swing.JDialog {
     private com.toedter.calendar.JDateChooser dateCheckOut;
     private com.toedter.calendar.JCalendar jCalendar1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
