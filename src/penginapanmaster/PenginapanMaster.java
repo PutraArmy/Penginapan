@@ -19,11 +19,11 @@ public class PenginapanMaster {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       MainView mv = new MainView();
-       mv.setVisible(true);
+//       MainView mv = new MainView();
+//       mv.setVisible(true);
 // CustomerPresenter.getCustomer();
         //MainPresenter.getMain();
-
+         CheckInPresenter.getCheckIn();
 //        RoomPresenter.getRoom();
 //        CheckOutPresenter.getCheckOut();
         //CustomerPresenter.getCustomer();
