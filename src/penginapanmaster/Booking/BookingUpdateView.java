@@ -65,7 +65,6 @@ public class BookingUpdateView extends javax.swing.JDialog {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1000, 600));
         setMinimumSize(new java.awt.Dimension(1000, 600));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -73,7 +72,7 @@ public class BookingUpdateView extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 24)); // NOI18N
         jLabel1.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Data Booking Update");
+        jLabel1.setText("Update Booking Data");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 1000, -1));
 
         tblBooking.setModel(new javax.swing.table.DefaultTableModel(
@@ -97,27 +96,27 @@ public class BookingUpdateView extends javax.swing.JDialog {
                 btnPilihActionPerformed(evt);
             }
         });
-        getContentPane().add(btnPilih, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 230, 70, -1));
+        getContentPane().add(btnPilih, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 230, 80, -1));
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
         jLabel2.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
         jLabel2.setText("ID Booking");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 70, -1));
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
         jLabel3.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
         jLabel3.setText("ID Customer");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 340, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 340, 80, -1));
 
         jLabel4.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
         jLabel4.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
         jLabel4.setText("ID Room");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 400, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 400, 60, -1));
 
         jLabel5.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
         jLabel5.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
         jLabel5.setText("Check In");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 280, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 280, 60, -1));
 
         txtIDBooking.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,13 +134,14 @@ public class BookingUpdateView extends javax.swing.JDialog {
         getContentPane().add(txtIDRoom, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 420, 111, -1));
 
         jLabel6.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
+        jLabel6.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
         jLabel6.setText("Check Out");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 340, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 340, 70, -1));
 
         jLabel7.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
         jLabel7.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
         jLabel7.setText("Duration");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 280, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 280, 60, -1));
 
         txtLama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,7 +153,7 @@ public class BookingUpdateView extends javax.swing.JDialog {
         jLabel8.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
         jLabel8.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
         jLabel8.setText("Total");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 340, -1, 20));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 340, 40, 20));
 
         txtTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,7 +163,7 @@ public class BookingUpdateView extends javax.swing.JDialog {
         getContentPane().add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 360, 111, -1));
 
         btnBatal.setText("Cancel");
-        getContentPane().add(btnBatal, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 500, 82, -1));
+        getContentPane().add(btnBatal, new org.netbeans.lib.awtextra.AbsoluteConstraints(782, 500, 90, -1));
 
         btnProses.setText("Process");
         btnProses.addActionListener(new java.awt.event.ActionListener() {
@@ -171,7 +171,7 @@ public class BookingUpdateView extends javax.swing.JDialog {
                 btnProsesActionPerformed(evt);
             }
         });
-        getContentPane().add(btnProses, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 500, -1, -1));
+        getContentPane().add(btnProses, new org.netbeans.lib.awtextra.AbsoluteConstraints(639, 500, 80, -1));
         getContentPane().add(dateCheckIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, -1, -1));
         getContentPane().add(dateCheckOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, -1, -1));
 
@@ -181,9 +181,9 @@ public class BookingUpdateView extends javax.swing.JDialog {
                 btnCekActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCek, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, -1, 20));
+        getContentPane().add(btnCek, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, 80, 20));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bookungupdateview.jpg"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Bookingupdateview.jpg"))); // NOI18N
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 600));
 
         pack();
