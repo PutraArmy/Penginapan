@@ -23,11 +23,9 @@ public class databaseCheckOut {
     
      Connection conn = null;
      Statement stmt = null;
-<<<<<<< HEAD:src/penginapanmaster/CheckOut/databaseCheckOut.java
-     checkOut ck = null;   
-=======
-     CheckOut ck;   
->>>>>>> PDF:src/penginapanmaster/CheckOut/DatabaseCheckOut.java
+
+     checkOut ck;   
+
     
     
     public void select_checkIn(int id){

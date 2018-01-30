@@ -27,15 +27,10 @@ import static javax.swing.text.StyleConstants.FontFamily;
  *
  * @author Lukman
  */
-<<<<<<< HEAD:src/penginapanmaster/CheckOut/checkOutPDF.java
+
 public class checkOutPDF {
-    private checkOut dt;
+    public checkOut dt;
     public checkOutPDF (checkOut dt){
-=======
-public class CheckOutPDF {
-    public CheckOut dt;
-    public CheckOutPDF (CheckOut dt){
->>>>>>> PDF:src/penginapanmaster/CheckOut/CheckOutPDF.java
         this.dt = dt;
     }
     

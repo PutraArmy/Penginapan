@@ -261,21 +261,14 @@ public class checkOutView extends javax.swing.JFrame {
                db.setUsedRoom(idCustomer);
                JOptionPane.showMessageDialog(null, "Proses Check In Berhasil");
                idBook = Integer.valueOf(txtIDBooking.getText());
-<<<<<<< HEAD:src/penginapanmaster/CheckOut/checkOutView.java
+
                 checkOutPresenter ck = new checkOutPresenter();
                 checkOut dt = ck.selectBooking(idBook); 
-                checkOutPDF cop = new checkOutPDF(dt);
-                cop.createPdf();
-=======
-                CheckOutPresenter ck = new CheckOutPresenter();
-                CheckOut dt = ck.selectBooking(idBook); 
 //                CheckOutPDF cop = new CheckOutPDF(dt);
-                CheckOutPDF p = new CheckOutPDF(dt);
+                checkOutPDF p = new checkOutPDF(dt);
                 p.createPdf(dt.getId_customer()+" "+dt.getNama());
 //                cop.createPdf();
 
-        
->>>>>>> PDF:src/penginapanmaster/CheckOut/CheckOutView.java
         } catch (HeadlessException e) {
             System.out.println(e.getMessage());
         } catch (FileNotFoundException ex) {
