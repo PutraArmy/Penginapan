@@ -26,61 +26,55 @@ public class roomAddView extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel4 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         noRoomLabel = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         no_roomField = new javax.swing.JTextField();
         classRoomBox = new javax.swing.JComboBox<>();
         saveButton = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1000, 600));
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/olegblack.png"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 150, 100));
+
+        jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 24)); // NOI18N
+        jLabel2.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
+        jLabel2.setText("Add Room Data");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, 200, 80));
+
+        noRoomLabel.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
+        noRoomLabel.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
         noRoomLabel.setText("No. Room");
+        getContentPane().add(noRoomLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(447, 222, -1, -1));
 
+        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
+        jLabel1.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
         jLabel1.setText("Class Room");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(447, 288, -1, -1));
+        getContentPane().add(no_roomField, new org.netbeans.lib.awtextra.AbsoluteConstraints(447, 242, 48, -1));
 
+        classRoomBox.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
         classRoomBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "VIP", "Family", "Single Bed", "Double Bed" }));
+        getContentPane().add(classRoomBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(447, 313, -1, -1));
 
+        saveButton.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
+        saveButton.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
         saveButton.setText("Save");
         saveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(saveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(562, 371, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(noRoomLabel)
-                    .addComponent(jLabel1))
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(no_roomField, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(classRoomBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(175, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(saveButton)
-                .addGap(57, 57, 57))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(noRoomLabel)
-                    .addComponent(no_roomField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(classRoomBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(saveButton)
-                .addContainerGap(164, Short.MAX_VALUE))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/roomadd.jpg"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -101,6 +95,9 @@ public class roomAddView extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> classRoomBox;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel noRoomLabel;
     private javax.swing.JTextField no_roomField;
     private javax.swing.JButton saveButton;
