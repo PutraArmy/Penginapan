@@ -28,6 +28,7 @@ public final class BookingView extends javax.swing.JFrame {
     DatabaseRoom dbRoom = new DatabaseRoom();
     DatabaseBooking dbBooking = new DatabaseBooking();
     RoomTableModel tRoom = new RoomTableModel();
+    BookingTableModel tBooking = new BookingTableModel();
     
     public BookingView() {
         initComponents();
@@ -98,10 +99,10 @@ public final class BookingView extends javax.swing.JFrame {
         jPanel1.add(jLabel13);
         jLabel13.setBounds(0, 0, 140, 110);
 
-        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 24)); // NOI18N
         jLabel1.setText("Booking Menu");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(360, 30, 290, 43);
+        jLabel1.setBounds(360, 30, 290, 32);
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
         jLabel2.setText("Name");
@@ -134,7 +135,7 @@ public final class BookingView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txtNama);
-        txtNama.setBounds(120, 180, 313, 27);
+        txtNama.setBounds(120, 180, 313, 20);
 
         txtNoIdentitas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,7 +143,7 @@ public final class BookingView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txtNoIdentitas);
-        txtNoIdentitas.setBounds(120, 230, 247, 27);
+        txtNoIdentitas.setBounds(120, 230, 247, 20);
 
         txtEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,7 +151,7 @@ public final class BookingView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txtEmail);
-        txtEmail.setBounds(120, 280, 313, 27);
+        txtEmail.setBounds(120, 280, 313, 20);
 
         jLabel8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
         jLabel8.setText("Room");
@@ -164,7 +165,7 @@ public final class BookingView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(cbClassRoom);
-        cbClassRoom.setBounds(490, 190, 79, 27);
+        cbClassRoom.setBounds(490, 190, 79, 20);
 
         tblRoom.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -185,7 +186,7 @@ public final class BookingView extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
         jLabel9.setText("Age");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(200, 310, 50, 14);
+        jLabel9.setBounds(200, 310, 50, 15);
 
         txtUsia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -198,7 +199,7 @@ public final class BookingView extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
         jLabel10.setText("Check In");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(490, 350, 48, 20);
+        jLabel10.setBounds(490, 350, 42, 20);
 
         jLabel11.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
         jLabel11.setText("Check Out");
@@ -213,7 +214,7 @@ public final class BookingView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnCari);
-        btnCari.setBounds(730, 190, 130, 26);
+        btnCari.setBounds(730, 190, 130, 23);
 
         cbJK.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "L", "P" }));
         jPanel1.add(cbJK);
@@ -226,7 +227,7 @@ public final class BookingView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnProses);
-        btnProses.setBounds(650, 500, 86, 29);
+        btnProses.setBounds(650, 500, 86, 23);
 
         btnBatal.setText("Cancel");
         btnBatal.addActionListener(new java.awt.event.ActionListener() {
@@ -235,7 +236,7 @@ public final class BookingView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnBatal);
-        btnBatal.setBounds(800, 500, 80, 29);
+        btnBatal.setBounds(800, 500, 80, 23);
 
         txtAlamat.setColumns(20);
         txtAlamat.setRows(5);
@@ -244,9 +245,9 @@ public final class BookingView extends javax.swing.JFrame {
         jPanel1.add(jScrollPane2);
         jScrollPane2.setBounds(120, 390, 313, 100);
         jPanel1.add(dateCheckIn);
-        dateCheckIn.setBounds(490, 370, 166, 27);
+        dateCheckIn.setBounds(490, 370, 166, 20);
         jPanel1.add(dateCheckOut);
-        dateCheckOut.setBounds(730, 370, 166, 27);
+        dateCheckOut.setBounds(730, 370, 166, 20);
 
         txtLama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -254,7 +255,7 @@ public final class BookingView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txtLama);
-        txtLama.setBounds(570, 430, 70, 27);
+        txtLama.setBounds(570, 430, 70, 20);
 
         txtHarga.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -262,12 +263,12 @@ public final class BookingView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txtHarga);
-        txtHarga.setBounds(730, 430, 166, 27);
+        txtHarga.setBounds(730, 430, 166, 20);
 
         jLabel7.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
         jLabel7.setText("IDR");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(730, 410, 18, 14);
+        jLabel7.setBounds(730, 410, 18, 15);
 
         jButton1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
         jButton1.setText("Check");
@@ -300,8 +301,12 @@ public final class BookingView extends javax.swing.JFrame {
         dbRoom.status_booked(ID);
         JOptionPane.showMessageDialog(null, "Room Sucesfull to Booked");
         setVisible(false);
+        cek();
     }//GEN-LAST:event_btnProsesActionPerformed
 
+    public boolean cek(){
+        return true;
+    }
     private void txtNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNamaActionPerformed
@@ -403,14 +408,17 @@ public final class BookingView extends javax.swing.JFrame {
     }
     
     
+    
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBatal;
     private javax.swing.JButton btnCari;
     private javax.swing.JButton btnProses;
-    private javax.swing.JComboBox<String> cbClassRoom;
-    private javax.swing.JComboBox<String> cbJK;
-    private com.toedter.calendar.JDateChooser dateCheckIn;
-    private com.toedter.calendar.JDateChooser dateCheckOut;
+    public javax.swing.JComboBox<String> cbClassRoom;
+    public javax.swing.JComboBox<String> cbJK;
+    public com.toedter.calendar.JDateChooser dateCheckIn;
+    public com.toedter.calendar.JDateChooser dateCheckOut;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -429,13 +437,13 @@ public final class BookingView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable tblRoom;
-    private javax.swing.JTextArea txtAlamat;
-    private javax.swing.JTextField txtEmail;
-    private javax.swing.JTextField txtHarga;
-    private javax.swing.JTextField txtLama;
-    private javax.swing.JTextField txtNama;
-    private javax.swing.JTextField txtNoIdentitas;
-    private javax.swing.JTextField txtUsia;
+    public javax.swing.JTable tblRoom;
+    public javax.swing.JTextArea txtAlamat;
+    public javax.swing.JTextField txtEmail;
+    public javax.swing.JTextField txtHarga;
+    public javax.swing.JTextField txtLama;
+    public javax.swing.JTextField txtNama;
+    public javax.swing.JTextField txtNoIdentitas;
+    public javax.swing.JTextField txtUsia;
     // End of variables declaration//GEN-END:variables
 }

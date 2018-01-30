@@ -8,8 +8,10 @@ package penginapanmaster.Booking;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import penginapanmaster.CheckIn.CheckIn;
 import penginapanmaster.customer.Customer;
 
 /**
@@ -22,8 +24,9 @@ public class DatabaseBooking {
     public final String url     = "jdbc:mysql://localhost/db_penginapan";
     public final String user    = "root";
     public final String pass    = "";
+    Booking bk = null;
     
-    public ArrayList<Booking> tampil_seluruh_booking(int id) {
+    public ArrayList<Booking> tampil_seluruh_booking() {
         
         ArrayList<Booking> list = new ArrayList<Booking>();
         Connection conn = null;
@@ -33,7 +36,7 @@ public class DatabaseBooking {
             Class.forName(driver);
             conn = DriverManager.getConnection(url, user, pass);
             stmt = conn.createStatement();
-            String sql = "Select * from booking where id_booking = id";
+            String sql = "Select * from booking";
             ResultSet rs = stmt.executeQuery(sql);
             
             while(rs.next()){
@@ -91,4 +94,89 @@ public class DatabaseBooking {
         }         
     }
     
+    public void hapus_booking(int ID){
+        Connection conn = null;
+        Statement stmt = null;
+        
+        try {
+            Class.forName(driver);
+            conn = DriverManager.getConnection(url, user, pass);
+            stmt = conn.createStatement();
+            String sql;
+            sql = "delete from booking where id_booking ='"+ID+"'";
+            stmt.executeUpdate(sql);
+           
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }       
+            
+    }
+    
+    public void update_booking(Booking c){
+        Connection conn = null;
+        Statement stmt = null;
+        
+        try {
+            Class.forName(driver);
+            conn = DriverManager.getConnection(url, user, pass);
+            stmt = conn.createStatement();
+            String sql;
+            sql = "UPDATE booking set "
+                    +" id_booking = '"+c.getId_booking()+"'"
+                    +", id_customer = '"+c.getId_customer()+"'"
+                    +", id_room = '"+c.getId_room()+"'"
+                    +", check_in = '"+c.getCheck_in()+"'"
+                    +", check_out = '"+c.getCheck_out()+"'"
+                    +", lama = '"+c.getLama()+"'"
+                    +", total = '"+c.getTotal()+"'"
+                    +"where id_booking ='"+c.getId_booking()+"'";
+            stmt.executeUpdate(sql);
+           
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } 
+    }
+    
+    public String pilih_room(int ID){
+        Connection conn = null;
+        Statement stmt = null;
+        
+        try {
+            Class.forName(driver);
+            conn = DriverManager.getConnection(url, user, pass);
+            stmt = conn.createStatement();
+            String sql;
+            sql = "Select class_room from room where id_room ='"+ID+"'";
+            ResultSet rs = stmt.executeQuery(sql);
+           
+            return rs.getString("class_room");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } 
+        return null;
+    }
+    
+    public Booking selectBooking(int id){
+        Connection conn = null;
+        Statement stmt = null;
+        try {
+            Class.forName(driver);
+            conn = DriverManager.getConnection(url, user, pass);
+            stmt = conn.createStatement();
+            
+            
+            String sql;
+            sql = "select * from booking inner join customer on customer.id_customer = booking.id_booking inner join room on room.id_room = booking.id_room WHERE id_booking ="+id ;
+            ResultSet rs = stmt.executeQuery(sql);
+        
+            
+            while(rs.next()){
+                this.bk = new Booking(
+                    rs.getString("class_room"));
+            }
+         } catch (ClassNotFoundException | SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return bk;
+    }
 }

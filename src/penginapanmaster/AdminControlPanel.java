@@ -30,56 +30,63 @@ public class AdminControlPanel extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel3 = new javax.swing.JLabel();
         toCustomerBtn = new javax.swing.JButton();
         toBookingBtn = new javax.swing.JButton();
         toRoomBtn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1000, 600));
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/olegblack.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 150, 100));
+
+        toCustomerBtn.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
         toCustomerBtn.setText("Customer");
+        toCustomerBtn.setMinimumSize(new java.awt.Dimension(100, 30));
+        toCustomerBtn.setPreferredSize(new java.awt.Dimension(100, 300));
         toCustomerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 toCustomerBtnActionPerformed(evt);
             }
         });
+        getContentPane().add(toCustomerBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 270, 240, 130));
 
+        toBookingBtn.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
+        toBookingBtn.setForeground(java.awt.Color.darkGray);
         toBookingBtn.setText("Booking");
+        toBookingBtn.setMaximumSize(new java.awt.Dimension(100, 30));
+        toBookingBtn.setMinimumSize(new java.awt.Dimension(100, 30));
+        toBookingBtn.setPreferredSize(new java.awt.Dimension(100, 30));
         toBookingBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 toBookingBtnActionPerformed(evt);
             }
         });
+        getContentPane().add(toBookingBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 240, 130));
 
+        toRoomBtn.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
         toRoomBtn.setText("Room");
         toRoomBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 toRoomBtnActionPerformed(evt);
             }
         });
+        getContentPane().add(toRoomBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, 240, 130));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(toCustomerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(toBookingBtn)
-                .addGap(45, 45, 45)
-                .addComponent(toRoomBtn)
-                .addContainerGap(67, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(115, 115, 115)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(toCustomerBtn)
-                    .addComponent(toBookingBtn)
-                    .addComponent(toRoomBtn))
-                .addContainerGap(162, Short.MAX_VALUE))
-        );
+        jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 24)); // NOI18N
+        jLabel2.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
+        jLabel2.setText("Which one data would you like to edit?");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 450, 120));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/login.jpg"))); // NOI18N
+        jLabel1.setPreferredSize(new java.awt.Dimension(1000, 600));
+        jLabel1.setRequestFocusEnabled(false);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1000, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -102,6 +109,9 @@ public class AdminControlPanel extends javax.swing.JFrame {
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JButton toBookingBtn;
     private javax.swing.JButton toCustomerBtn;
     private javax.swing.JButton toRoomBtn;

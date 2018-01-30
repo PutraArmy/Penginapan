@@ -13,8 +13,16 @@ public class Booking {
     
     private int id_booking, id_customer,id_room ;
     private int lama, total;
-    private String check_in, check_out;
+    private String check_in, check_out,class_room;
 
+    public String getClass_room() {
+        return class_room;
+    }
+
+    Booking(String class_room) {
+        
+        this.class_room = class_room;
+    }
     public int getLama() {
         return lama;
     }

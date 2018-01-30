@@ -79,6 +79,8 @@ public class RoomEditView extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel7 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         idRoomLabel = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -88,88 +90,82 @@ public class RoomEditView extends javax.swing.JDialog {
         jLabel5 = new javax.swing.JLabel();
         StatusComboBox = new javax.swing.JComboBox<>();
         updateRoom = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1000, 600));
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("ID ROOM");
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/olegblack.png"))); // NOI18N
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 150, 100));
 
+        jLabel6.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 24)); // NOI18N
+        jLabel6.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
+        jLabel6.setText("Edit Room Data");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 40, 200, 50));
+
+        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
+        jLabel1.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
+        jLabel1.setText("Room ID");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 70, -1));
+
+        idRoomLabel.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
+        idRoomLabel.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
         idRoomLabel.setText("idroom");
+        getContentPane().add(idRoomLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, 210, -1));
 
+        jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
+        jLabel3.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
         jLabel3.setText("No. Room");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, -1, -1));
 
-        noRoomField.setText("FieldNoRoom");
         noRoomField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 noRoomFieldActionPerformed(evt);
             }
         });
+        getContentPane().add(noRoomField, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, 150, -1));
 
+        jLabel4.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
+        jLabel4.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
         jLabel4.setText("Status");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(454, 359, 60, -1));
 
+        ClassComboBox.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
         ClassComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\"VIP\"", "\"Family\"", "\"Single Bed\"", "\"Double Bed\"" }));
         ClassComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ClassComboBoxActionPerformed(evt);
             }
         });
+        getContentPane().add(ClassComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
+        jLabel5.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.light"));
         jLabel5.setText("Class Room");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 320, 80, -1));
 
+        StatusComboBox.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
         StatusComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\"Booked\"", "\"Used\"", "\"Available\"" }));
+        StatusComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StatusComboBoxActionPerformed(evt);
+            }
+        });
+        getContentPane().add(StatusComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 410, 76, 20));
 
+        updateRoom.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
         updateRoom.setText("Update");
         updateRoom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateRoomActionPerformed(evt);
             }
         });
+        getContentPane().add(updateRoom, new org.netbeans.lib.awtextra.AbsoluteConstraints(831, 505, 67, 23));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel4))
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(idRoomLabel)
-                    .addComponent(StatusComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(noRoomField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ClassComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(updateRoom)
-                .addGap(80, 80, 80))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(idRoomLabel))
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(noRoomField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(ClassComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(StatusComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(updateRoom)
-                .addContainerGap(96, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/roomedit.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -202,6 +198,10 @@ public class RoomEditView extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_ClassComboBoxActionPerformed
 
+    private void StatusComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StatusComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_StatusComboBoxActionPerformed
+
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -209,9 +209,12 @@ public class RoomEditView extends javax.swing.JDialog {
     private javax.swing.JComboBox<String> StatusComboBox;
     private javax.swing.JLabel idRoomLabel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField noRoomField;
     private javax.swing.JButton updateRoom;
     // End of variables declaration//GEN-END:variables

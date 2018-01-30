@@ -5,8 +5,12 @@
  */
 package penginapanmaster;
 
+<<<<<<< HEAD
 import java.io.FileNotFoundException;
 import javax.swing.text.Document;
+=======
+import penginapanmaster.Booking.BookingPresenter;
+>>>>>>> allview
 import penginapanmaster.CheckIn.CheckInPresenter;
 import penginapanmaster.CheckOut.CheckOutPresenter;
 import penginapanmaster.customer.CustomerPresenter;
@@ -25,8 +29,7 @@ public class PenginapanMaster {
       
 // CustomerPresenter.getCustomer();
         //MainPresenter.getMain();
-//        BookingPresenter.getCheckIn();
-//        CheckInPresenter.getCheckIn();
+
 //        RoomPresenter.getRoom();
         CheckOutPresenter.getCheckOut();
         //CustomerPresenter.getCustomer();
