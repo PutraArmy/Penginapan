@@ -40,7 +40,7 @@ public class penginapanMaster {
 //        BookingPresenter.getCheckIn();
 //        CheckInPresenter.getCheckIn();
 //        RoomPresenter.getRoom();
-//        CheckOutPresenter.getCheckOut();
+        CheckOutPresenter.getCheckOut();
         //CustomerPresenter.getCustomer();
         //CustomerPresenter.getCustomer();
 
