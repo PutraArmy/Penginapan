@@ -241,10 +241,10 @@ public class CheckInView extends javax.swing.JFrame {
        txtCheckIn.setText(String.valueOf(dt.getCheck_in()));
        txtCheckOut.setText(String.valueOf(dt.getCheck_out()));
        txtClassRoom.setText(String.valueOf(dt.getClass_room()));
-       txtLama.setText(String.valueOf(dt.getId_customer()));
-       txtNama.setText(String.valueOf(dt.getId_customer()));
-       txtNoRoom.setText(String.valueOf(dt.getId_customer()));
-       txtTotal.setText(String.valueOf(dt.getId_customer()));
+       txtLama.setText(String.valueOf(dt.getLama()));
+       txtNama.setText(String.valueOf(dt.getNama()));
+       txtNoRoom.setText(String.valueOf(dt.getNo_room()));
+       txtTotal.setText(String.valueOf(dt.getTotal()));
        
     }//GEN-LAST:event_btnSearchActionPerformed
 

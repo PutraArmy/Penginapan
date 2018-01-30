@@ -5,6 +5,8 @@
  */
 package penginapanmaster;
 
+import java.io.FileNotFoundException;
+import javax.swing.text.Document;
 import penginapanmaster.CheckIn.CheckInPresenter;
 import penginapanmaster.CheckOut.CheckOutPresenter;
 import penginapanmaster.customer.CustomerPresenter;
@@ -17,9 +19,10 @@ public class PenginapanMaster {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-       MainView mv = new MainView();
-       mv.setVisible(true);
+    public static void main(String[] args) throws FileNotFoundException {
+//       MainView mv = new MainView();
+//       mv.setVisible(true);
+      
 // CustomerPresenter.getCustomer();
         //MainPresenter.getMain();
 //        BookingPresenter.getCheckIn();

@@ -4,8 +4,17 @@
  * and open the template in the editor.
  */
 package penginapanmaster.CheckOut;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
 import java.awt.HeadlessException;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import penginapanmaster.pdf;
 
 /**
  *
@@ -232,10 +241,10 @@ public class CheckOutView extends javax.swing.JFrame {
        txtCheckIn.setText(String.valueOf(dt.getCheck_in()));
        txtCheckOut.setText(String.valueOf(dt.getCheck_out()));
        txtClassRoom.setText(String.valueOf(dt.getClass_room()));
-       txtLama.setText(String.valueOf(dt.getId_customer()));
-       txtNama.setText(String.valueOf(dt.getId_customer()));
-       txtNoRoom.setText(String.valueOf(dt.getId_customer()));
-       txtTotal.setText(String.valueOf(dt.getId_customer()));
+       txtLama.setText(String.valueOf(dt.getLama()));
+       txtNama.setText(String.valueOf(dt.getNama()));
+       txtNoRoom.setText(String.valueOf(dt.getNo_room()));
+       txtTotal.setText(String.valueOf(dt.getTotal()));
        
     }//GEN-LAST:event_btnSearchActionPerformed
 
@@ -251,8 +260,15 @@ public class CheckOutView extends javax.swing.JFrame {
                idCustomer = Integer.valueOf(txtIDRoom.getText());
                db.setUsedRoom(idCustomer);
                JOptionPane.showMessageDialog(null, "Proses Check In Berhasil");
+               idBook = Integer.valueOf(txtIDBooking.getText());
+                CheckOutPresenter ck = new CheckOutPresenter();
+                CheckOut dt = ck.selectBooking(idBook); 
+                CheckOutPDF cop = new CheckOutPDF(dt);
+                cop.createPdf();
         } catch (HeadlessException e) {
             System.out.println(e.getMessage());
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(CheckOutView.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnProsesActionPerformed
 
@@ -260,8 +276,6 @@ public class CheckOutView extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.setVisible(false);
     }//GEN-LAST:event_btnBatalActionPerformed
-
-   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBatal;
