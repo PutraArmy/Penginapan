@@ -6,19 +6,16 @@
 package penginapanmaster.Booking;
 
 import javax.swing.JOptionPane;
-import penginapanmaster.customer.CustomerAddView;
-import penginapanmaster.customer.CustomerUpdateView;
-
 /**
  *
  * @author Army
  */
-public class BookingAdminView extends javax.swing.JFrame {
+public class bookingAdminView extends javax.swing.JFrame {
 
-    BookingTableModel tBooking = new BookingTableModel();
-    DatabaseBooking db = new DatabaseBooking();
+    bookingTableModel tBooking = new bookingTableModel();
+    databaseBooking db = new databaseBooking();
     
-    public BookingAdminView() {
+    public bookingAdminView() {
         initComponents();
         tampilBooking();
     }
@@ -49,7 +46,11 @@ public class BookingAdminView extends javax.swing.JFrame {
         tblBookingAdmin = new javax.swing.JTable();
         btnDelete = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingAdminView.java
         jLabel2 = new javax.swing.JLabel();
+=======
+        jButton1 = new javax.swing.JButton();
+>>>>>>> merk:src/penginapanmaster/Booking/bookingAdminView.java
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -150,11 +151,68 @@ public class BookingAdminView extends javax.swing.JFrame {
         });
         jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 450, 116, -1));
 
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingAdminView.java
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bookingadminview.jpg"))); // NOI18N
         jLabel2.setPreferredSize(new java.awt.Dimension(1000, 600));
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 600));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+=======
+        jButton1.setText("Cancel");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnDelete, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                    .addComponent(btnUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(43, 43, 43))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(97, 97, 97)
+                        .addComponent(btnDelete)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnUpdate)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1)))
+                .addContainerGap(92, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+>>>>>>> merk:src/penginapanmaster/Booking/bookingAdminView.java
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -182,11 +240,12 @@ public class BookingAdminView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
-        BookingUpdateView fAdd = new BookingUpdateView(this,true);
+        bookingUpdateView fAdd = new bookingUpdateView(this,true);
         fAdd.setVisible(true);
         refreshData();
     }//GEN-LAST:event_btnUpdateActionPerformed
 
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingAdminView.java
     private void btnDelete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelete1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnDelete1ActionPerformed
@@ -194,6 +253,11 @@ public class BookingAdminView extends javax.swing.JFrame {
     private void btnUpdate1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdate1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnUpdate1ActionPerformed
+=======
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
+>>>>>>> merk:src/penginapanmaster/Booking/bookingAdminView.java
 
     public void tampilBooking(){
         tBooking.setData(db.tampil_seluruh_booking());
@@ -214,22 +278,35 @@ public class BookingAdminView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDelete;
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingAdminView.java
     private javax.swing.JButton btnDelete1;
+=======
+>>>>>>> merk:src/penginapanmaster/Booking/bookingAdminView.java
     private javax.swing.JButton btnUpdate;
     private javax.swing.JButton btnUpdate1;
     private javax.swing.ButtonGroup buttonGroup1;
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingAdminView.java
+=======
+    private javax.swing.JButton jButton1;
+>>>>>>> merk:src/penginapanmaster/Booking/bookingAdminView.java
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingAdminView.java
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+=======
+>>>>>>> merk:src/penginapanmaster/Booking/bookingAdminView.java
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     public static javax.swing.JTable tblBookingAdmin;
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingAdminView.java
     public static javax.swing.JTable tblBookingAdmin1;
+=======
+>>>>>>> merk:src/penginapanmaster/Booking/bookingAdminView.java
     // End of variables declaration//GEN-END:variables
 }

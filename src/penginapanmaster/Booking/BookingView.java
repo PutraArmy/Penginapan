@@ -8,29 +8,29 @@ package penginapanmaster.Booking;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JOptionPane;
-import penginapanmaster.customer.Customer;
-import penginapanmaster.customer.DatabaseCustomer;
-import penginapanmaster.room.DatabaseRoom;
-import penginapanmaster.room.RoomTableModel;
+import penginapanmaster.customer.customer;
+import penginapanmaster.customer.databaseCustomer;
+import penginapanmaster.room.databaseRoom;
+import penginapanmaster.room.roomTableModel;
 
 /**
  *
  * @author Army
  */
-public final class BookingView extends javax.swing.JFrame {
+public class bookingView extends javax.swing.JFrame {
 
     int ID;
     long harga, lama;
     Date checkIn, checkOut;
     String class_room;
     String tglcheckIn, tglcheckOut;
-    DatabaseCustomer dbCus = new DatabaseCustomer();
-    DatabaseRoom dbRoom = new DatabaseRoom();
-    DatabaseBooking dbBooking = new DatabaseBooking();
-    RoomTableModel tRoom = new RoomTableModel();
-    BookingTableModel tBooking = new BookingTableModel();
+    databaseCustomer dbCus = new databaseCustomer();
+    databaseRoom dbRoom = new databaseRoom();
+    databaseBooking dbBooking = new databaseBooking();
+    roomTableModel tRoom = new roomTableModel();
+    bookingTableModel tBooking = new bookingTableModel();
     
-    public BookingView() {
+    public bookingView() {
         initComponents();
         tampilusedclass();
     }
@@ -79,9 +79,7 @@ public final class BookingView extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1000, 600));
         setMinimumSize(new java.awt.Dimension(1000, 600));
-        setPreferredSize(new java.awt.Dimension(1000, 600));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -135,7 +133,11 @@ public final class BookingView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txtNama);
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingView.java
         txtNama.setBounds(120, 180, 313, 20);
+=======
+        txtNama.setBounds(120, 180, 313, 29);
+>>>>>>> merk:src/penginapanmaster/Booking/bookingView.java
 
         txtNoIdentitas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,7 +145,11 @@ public final class BookingView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txtNoIdentitas);
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingView.java
         txtNoIdentitas.setBounds(120, 230, 247, 20);
+=======
+        txtNoIdentitas.setBounds(120, 230, 247, 29);
+>>>>>>> merk:src/penginapanmaster/Booking/bookingView.java
 
         txtEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,21 +157,29 @@ public final class BookingView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txtEmail);
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingView.java
         txtEmail.setBounds(120, 280, 313, 20);
+=======
+        txtEmail.setBounds(120, 280, 313, 29);
+>>>>>>> merk:src/penginapanmaster/Booking/bookingView.java
 
         jLabel8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
         jLabel8.setText("Room");
         jPanel1.add(jLabel8);
         jLabel8.setBounds(490, 170, 40, 20);
 
-        cbClassRoom.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "VIP", "Family", "Singel Bad", "Double Bad" }));
+        cbClassRoom.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "VIP", "Family", "Single Bed", "Double Bed" }));
         cbClassRoom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbClassRoomActionPerformed(evt);
             }
         });
         jPanel1.add(cbClassRoom);
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingView.java
         cbClassRoom.setBounds(490, 190, 79, 20);
+=======
+        cbClassRoom.setBounds(490, 190, 79, 29);
+>>>>>>> merk:src/penginapanmaster/Booking/bookingView.java
 
         tblRoom.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -214,7 +228,11 @@ public final class BookingView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnCari);
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingView.java
         btnCari.setBounds(730, 190, 130, 23);
+=======
+        btnCari.setBounds(690, 180, 170, 28);
+>>>>>>> merk:src/penginapanmaster/Booking/bookingView.java
 
         cbJK.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "L", "P" }));
         jPanel1.add(cbJK);
@@ -227,7 +245,11 @@ public final class BookingView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnProses);
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingView.java
         btnProses.setBounds(650, 500, 86, 23);
+=======
+        btnProses.setBounds(606, 500, 130, 31);
+>>>>>>> merk:src/penginapanmaster/Booking/bookingView.java
 
         btnBatal.setText("Cancel");
         btnBatal.addActionListener(new java.awt.event.ActionListener() {
@@ -236,7 +258,11 @@ public final class BookingView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnBatal);
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingView.java
         btnBatal.setBounds(800, 500, 80, 23);
+=======
+        btnBatal.setBounds(780, 500, 100, 31);
+>>>>>>> merk:src/penginapanmaster/Booking/bookingView.java
 
         txtAlamat.setColumns(20);
         txtAlamat.setRows(5);
@@ -245,9 +271,15 @@ public final class BookingView extends javax.swing.JFrame {
         jPanel1.add(jScrollPane2);
         jScrollPane2.setBounds(120, 390, 313, 100);
         jPanel1.add(dateCheckIn);
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingView.java
         dateCheckIn.setBounds(490, 370, 166, 20);
         jPanel1.add(dateCheckOut);
         dateCheckOut.setBounds(730, 370, 166, 20);
+=======
+        dateCheckIn.setBounds(490, 370, 166, 29);
+        jPanel1.add(dateCheckOut);
+        dateCheckOut.setBounds(730, 370, 166, 29);
+>>>>>>> merk:src/penginapanmaster/Booking/bookingView.java
 
         txtLama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -255,7 +287,11 @@ public final class BookingView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txtLama);
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingView.java
         txtLama.setBounds(570, 430, 70, 20);
+=======
+        txtLama.setBounds(570, 430, 70, 29);
+>>>>>>> merk:src/penginapanmaster/Booking/bookingView.java
 
         txtHarga.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -263,7 +299,11 @@ public final class BookingView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txtHarga);
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingView.java
         txtHarga.setBounds(730, 430, 166, 20);
+=======
+        txtHarga.setBounds(730, 430, 166, 29);
+>>>>>>> merk:src/penginapanmaster/Booking/bookingView.java
 
         jLabel7.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
         jLabel7.setText("IDR");
@@ -296,17 +336,20 @@ public final class BookingView extends javax.swing.JFrame {
         System.out.println(JK);
         int l = (int) lama;
         int h = (int) harga;
-        dbCus.tambah_customer(new Customer(txtNama.getText(), txtNoIdentitas.getText(),txtAlamat.getText(),JK,txtEmail.getText(),txtUsia.getText()));
-        dbBooking.tambah_booking(new Booking(dbCus.getId_customer(), ID,tglcheckIn,tglcheckOut,l,h));
-        dbRoom.status_booked(ID);
-        JOptionPane.showMessageDialog(null, "Room Sucesfull to Booked");
-        setVisible(false);
-        cek();
+        if (txtNama.getText() == null || txtNoIdentitas.getText() == null || txtAlamat.getText() == null ||txtEmail.getText() == null ||txtUsia.getText() == null ||class_room == null ||
+            tglcheckIn == null ||tglcheckOut == null ||l == 0 ||h == 0){
+            JOptionPane.showMessageDialog(null, "Harap Isi semua Form");
+        }else{
+            dbCus.tambah_customer(new customer(txtNama.getText(), txtNoIdentitas.getText(),txtAlamat.getText(),JK,txtEmail.getText(),txtUsia.getText()));
+            dbBooking.tambah_booking(new booking(dbCus.getId_customer(), ID,tglcheckIn,tglcheckOut,l,h));
+            dbRoom.status_booked(ID);
+            JOptionPane.showMessageDialog(null, "Room Sucesfull to Booked");
+            setVisible(false);
+            
+        }
     }//GEN-LAST:event_btnProsesActionPerformed
 
-    public boolean cek(){
-        return true;
-    }
+    
     private void txtNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNamaActionPerformed
@@ -328,7 +371,7 @@ public final class BookingView extends javax.swing.JFrame {
         SimpleDateFormat format = new SimpleDateFormat(tampilan);
         tglcheckIn = String.valueOf(format.format(dateCheckIn.getDate()));
         tglcheckOut = String.valueOf(format.format(dateCheckOut.getDate()));
-//        txtHarga.setText(Long.toString(10000));
+        System.out.println("cek");
         try{
             SimpleDateFormat df = new SimpleDateFormat(tampilan);
             checkIn = df.parse(tglcheckIn);
@@ -340,24 +383,26 @@ public final class BookingView extends javax.swing.JFrame {
             txtLama.setText(Long.toString(lama)+" Hari");
             
             pilih_Room();
-            switch (class_room) {
-                case "VIP"          : harga = 1000000;
-                                      break;
-                case "Family"       : harga = 750000;
-                                      break;
-                case "Single Bed"   : harga = 250000;
-                                      break;
-                case "Double Bed"   : harga = 500000;
-                                      break;
+            if (class_room == null){
+                JOptionPane.showMessageDialog(null, "Pilih Ruangan terlebih Dahulu");
+            } else {
+                switch (class_room) {
+                    case "VIP"          : harga = 1000000;
+                                          break;
+                    case "Family"       : harga = 750000;
+                                          break;
+                    case "Single Bed"   : harga = 250000;
+                                          break;
+                    case "Double Bed"   : harga = 500000;
+                                          break;
+                }
             }
             long total = harga * lama;
             txtHarga.setText(Long.toString(total));
     }
         catch (Exception e){
-                System.out.println(""+ e.getMessage());
-          }
-        System.out.println(tglcheckIn);
-        System.out.println(tglcheckOut);
+            System.out.println(""+ e.getMessage());
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtNoIdentitasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNoIdentitasActionPerformed

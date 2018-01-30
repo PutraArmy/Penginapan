@@ -264,11 +264,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Cancel"/>
       </Properties>
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingUpdateView.form
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="782" y="500" width="90" height="-1"/>
         </Constraint>
       </Constraints>
+=======
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBatalActionPerformed"/>
+      </Events>
+>>>>>>> merk:src/penginapanmaster/Booking/bookingUpdateView.form
     </Component>
     <Component class="javax.swing.JButton" name="btnProses">
       <Properties>

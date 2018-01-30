@@ -14,10 +14,10 @@ import javax.swing.JOptionPane;
  *
  * @author Army
  */
-public class BookingUpdateView extends javax.swing.JDialog {
+public class bookingUpdateView extends javax.swing.JDialog {
 
-    BookingTableModel tBooking = new BookingTableModel();
-    DatabaseBooking dbBook = new DatabaseBooking(); 
+    bookingTableModel tBooking = new bookingTableModel();
+    databaseBooking dbBook = new databaseBooking(); 
     int ID;
     int ID_Booking;
     long harga, lama;
@@ -25,7 +25,7 @@ public class BookingUpdateView extends javax.swing.JDialog {
     String class_room;
     String tglcheckIn, tglcheckOut;
     
-    public BookingUpdateView(java.awt.Frame parent, boolean modal) {
+    public bookingUpdateView(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         tampildata();
@@ -166,8 +166,17 @@ public class BookingUpdateView extends javax.swing.JDialog {
         });
         getContentPane().add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 360, 111, -1));
 
+<<<<<<< HEAD:src/penginapanmaster/Booking/BookingUpdateView.java
         btnBatal.setText("Cancel");
         getContentPane().add(btnBatal, new org.netbeans.lib.awtextra.AbsoluteConstraints(782, 500, 90, -1));
+=======
+        btnBatal.setText("Batal");
+        btnBatal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBatalActionPerformed(evt);
+            }
+        });
+>>>>>>> merk:src/penginapanmaster/Booking/bookingUpdateView.java
 
         btnProses.setText("Process");
         btnProses.addActionListener(new java.awt.event.ActionListener() {
@@ -229,10 +238,14 @@ public class BookingUpdateView extends javax.swing.JDialog {
     }//GEN-LAST:event_txtIDCustomerActionPerformed
 
     private void btnProsesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProsesActionPerformed
-
-        dbBook.update_booking(new Booking(Integer.valueOf(txtIDBooking.getText()), Integer.valueOf(txtIDCustomer.getText()), Integer.valueOf(txtIDRoom.getText()), tglcheckIn,tglcheckOut, Integer.valueOf(txtLama.getText()), Integer.valueOf(txtTotal.getText())));
-        JOptionPane.showMessageDialog(null, "Data Berhasil diUpdate");
-        setVisible(false);
+        if (txtIDBooking.getText() == null || txtIDCustomer.getText() == null || txtIDRoom.getText() == null ||tglcheckIn == null ||tglcheckOut == null ||txtLama.getText() == null ||
+            txtTotal.getText() == null ) {
+            JOptionPane.showMessageDialog(null, "Pilih Ruangan terlebih Dahulu");
+        } else {
+            dbBook.update_booking(new booking(Integer.valueOf(txtIDBooking.getText()), Integer.valueOf(txtIDCustomer.getText()), Integer.valueOf(txtIDRoom.getText()), tglcheckIn,tglcheckOut, Integer.valueOf(txtLama.getText()), Integer.valueOf(txtTotal.getText())));
+            JOptionPane.showMessageDialog(null, "Data Berhasil diUpdate");
+            setVisible(false);
+        }
     }//GEN-LAST:event_btnProsesActionPerformed
 
     private void btnCekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCekActionPerformed
@@ -249,15 +262,15 @@ public class BookingUpdateView extends javax.swing.JDialog {
             long diff = kembali1-pinjam1;
             lama = diff/(24*60*60*1000);
             txtLama.setText(Long.toString(lama));
-            Booking bk = dbBook.selectBooking(ID_Booking);
+            booking bk = dbBook.selectBooking(ID_Booking);
             switch (bk.getClass_room()) {
                 case "VIP"          : harga = 1000000;
                                       break;
                 case "Family"       : harga = 750000;
                                       break;
-                case "Single Bad"   : harga = 250000;
+                case "Single Bed"   : harga = 250000;
                                       break;
-                case "Double Bad"   : harga = 500000;
+                case "Double Bed"   : harga = 500000;
                                       break;
             }
             long total = harga * lama;
@@ -277,6 +290,10 @@ public class BookingUpdateView extends javax.swing.JDialog {
     private void txtLamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLamaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtLamaActionPerformed
+
+    private void btnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatalActionPerformed
+        setVisible(false);
+    }//GEN-LAST:event_btnBatalActionPerformed
 
     public void pilih_Room() {
         try {

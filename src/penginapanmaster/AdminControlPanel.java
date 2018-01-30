@@ -6,18 +6,18 @@
 
 package penginapanmaster;
 
-import penginapanmaster.Booking.BookingPresenter;
-import penginapanmaster.customer.CustomerPresenter;
-import penginapanmaster.room.RoomPresenter;
+import penginapanmaster.Booking.bookingPresenter;
+import penginapanmaster.customer.customerPresenter;
+import penginapanmaster.room.roomPresenter;
 
 /**
  *
  * @author Lukman
  */
-public class AdminControlPanel extends javax.swing.JFrame {
+public class adminControlPanel extends javax.swing.JFrame {
 
     /** Creates new form AdminControlPanel */
-    public AdminControlPanel() {
+    public adminControlPanel() {
         initComponents();
     }
 
@@ -34,9 +34,10 @@ public class AdminControlPanel extends javax.swing.JFrame {
         toCustomerBtn = new javax.swing.JButton();
         toBookingBtn = new javax.swing.JButton();
         toRoomBtn = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+  	jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-
+        jButton1 = new javax.swing.JButton();
+	
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1000, 600));
         setResizable(false);
@@ -88,30 +89,71 @@ public class AdminControlPanel extends javax.swing.JFrame {
         jLabel1.setRequestFocusEnabled(false);
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1000, 600));
 
+        jButton1.setText("Cancel");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(toCustomerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(toBookingBtn)
+                        .addGap(45, 45, 45)
+                        .addComponent(toRoomBtn)))
+                .addContainerGap(67, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1)
+                .addGap(72, 72, 72)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(toCustomerBtn)
+                    .addComponent(toBookingBtn)
+                    .addComponent(toRoomBtn))
+                .addContainerGap(162, Short.MAX_VALUE))
+        );
+ 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void toCustomerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toCustomerBtnActionPerformed
         // TODO add your handling code here:
-        CustomerPresenter.getCustomer();
+        customerPresenter.getCustomer();
     }//GEN-LAST:event_toCustomerBtnActionPerformed
 
     private void toBookingBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toBookingBtnActionPerformed
         // TODO add your handling code here:
-        BookingPresenter.getBooking();
+        bookingPresenter.getBookingAdmin();
     }//GEN-LAST:event_toBookingBtnActionPerformed
 
     private void toRoomBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toRoomBtnActionPerformed
         // TODO add your handling code here:
-        RoomPresenter.getRoom();
+        roomPresenter.getRoom();
     }//GEN-LAST:event_toRoomBtnActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+  private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton toBookingBtn;
     private javax.swing.JButton toCustomerBtn;
     private javax.swing.JButton toRoomBtn;

@@ -4,6 +4,7 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
 <<<<<<< HEAD
         <group>
+<<<<<<< HEAD
             <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/CheckOut/CheckOutPDF.java</file>
             <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/CheckOut/CheckOutView.java</file>
             <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/CheckOut/CheckOut.java</file>
@@ -30,6 +31,37 @@
             <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/room/DatabaseRoom.java</file>
             <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/PenginapanMaster.java</file>
             <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/AdminLogin.java</file>
+=======
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/customer/customerPresenter.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/CheckIn/databaseCheckIn.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/CheckOut/checkOutPresenter.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/room/roomAddView.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/CheckOut/checkOut.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/adminLogin.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/customer/customerView.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/Booking/bookingPresenter.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/customer/customer.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/CheckOut/databaseCheckOut.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/customer/customerAddView.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/room/roomTableModel.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/CheckIn/checkIn.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/room/databaseRoom.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/room/room.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/customer/databaseCustomer.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/customer/customerUpdateView.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/CheckIn/checkInPresenter.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/CheckOut/checkOutPDF.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/room/roomEditView.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/customer/customerTableModel.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/CheckIn/checkInView.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/room/roomView.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/Booking/bookingView.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/Booking/booking.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/room/roomPresenter.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/mainView.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/penginapanMaster.java</file>
+            <file>file:/D:/TugasBesarPBO/Penginapan/src/penginapanmaster/CheckOut/checkOutView.java</file>
+>>>>>>> merk
         </group>
 =======
         <group/>
