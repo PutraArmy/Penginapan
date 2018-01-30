@@ -8,7 +8,6 @@ package penginapanmaster.CheckIn;
 
 import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
-import penginapanmaster.Booking.DatabaseBooking;
 
 /**
  *
