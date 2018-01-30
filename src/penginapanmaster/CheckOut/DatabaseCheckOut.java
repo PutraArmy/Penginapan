@@ -23,7 +23,7 @@ public class DatabaseCheckOut {
     
      Connection conn = null;
      Statement stmt = null;
-     CheckOut ck = null;   
+     CheckOut ck;   
     
     
     public void select_checkIn(int id){

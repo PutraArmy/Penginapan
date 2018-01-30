@@ -263,8 +263,12 @@ public class CheckOutView extends javax.swing.JFrame {
                idBook = Integer.valueOf(txtIDBooking.getText());
                 CheckOutPresenter ck = new CheckOutPresenter();
                 CheckOut dt = ck.selectBooking(idBook); 
-                CheckOutPDF cop = new CheckOutPDF(dt);
-                cop.createPdf();
+//                CheckOutPDF cop = new CheckOutPDF(dt);
+                CheckOutPDF p = new CheckOutPDF(dt);
+                p.createPdf(dt.getId_customer()+" "+dt.getNama());
+//                cop.createPdf();
+
+        
         } catch (HeadlessException e) {
             System.out.println(e.getMessage());
         } catch (FileNotFoundException ex) {
