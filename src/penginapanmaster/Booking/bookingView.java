@@ -17,7 +17,11 @@ import penginapanmaster.room.roomTableModel;
  *
  * @author Army
  */
+<<<<<<< HEAD:src/penginapanmaster/Booking/bookingView.java
 public class bookingView extends javax.swing.JFrame {
+=======
+public final class BookingView extends javax.swing.JFrame {
+>>>>>>> MainView:src/penginapanmaster/Booking/BookingView.java
 
     int ID;
     long harga, lama;

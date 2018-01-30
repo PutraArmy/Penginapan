@@ -5,7 +5,10 @@
  */
 package penginapanmaster.Booking;
 
+<<<<<<< HEAD:src/penginapanmaster/Booking/booking.java
 
+=======
+>>>>>>> MainView:src/penginapanmaster/Booking/Booking.java
 /**
  *
  * @author Army
