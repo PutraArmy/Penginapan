@@ -253,14 +253,14 @@ public class checkInView extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNamaActionPerformed
 
     private void btnProsesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProsesActionPerformed
-        // TODO add your handling code here:
-         // TODO add your handling code here:
+        
         try {
             //ambil baris dimana kursor berada
-               idCustomer = Integer.valueOf(txtIDRoom.getText());
-               db.setUsedRoom(idCustomer);
-               JOptionPane.showMessageDialog(null, "Proses Check In Berhasil");
-        } catch (HeadlessException e) {
+            idCustomer = Integer.valueOf(txtIDRoom.getText());
+            db.setUsedRoom(idCustomer);
+            JOptionPane.showMessageDialog(null, "Proses Check In Berhasil");
+        } 
+        catch (HeadlessException e) {
             System.out.println(e.getMessage());
         }
     }//GEN-LAST:event_btnProsesActionPerformed

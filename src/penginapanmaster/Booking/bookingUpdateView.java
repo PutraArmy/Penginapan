@@ -271,10 +271,14 @@ public class bookingUpdateView extends javax.swing.JDialog {
     }//GEN-LAST:event_txtIDCustomerActionPerformed
 
     private void btnProsesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProsesActionPerformed
-
-        dbBook.update_booking(new booking(Integer.valueOf(txtIDBooking.getText()), Integer.valueOf(txtIDCustomer.getText()), Integer.valueOf(txtIDRoom.getText()), tglcheckIn,tglcheckOut, Integer.valueOf(txtLama.getText()), Integer.valueOf(txtTotal.getText())));
-        JOptionPane.showMessageDialog(null, "Data Berhasil diUpdate");
-        setVisible(false);
+        if (txtIDBooking.getText() == null || txtIDCustomer.getText() == null || txtIDRoom.getText() == null ||tglcheckIn == null ||tglcheckOut == null ||txtLama.getText() == null ||
+            txtTotal.getText() == null ) {
+            JOptionPane.showMessageDialog(null, "Pilih Ruangan terlebih Dahulu");
+        } else {
+            dbBook.update_booking(new booking(Integer.valueOf(txtIDBooking.getText()), Integer.valueOf(txtIDCustomer.getText()), Integer.valueOf(txtIDRoom.getText()), tglcheckIn,tglcheckOut, Integer.valueOf(txtLama.getText()), Integer.valueOf(txtTotal.getText())));
+            JOptionPane.showMessageDialog(null, "Data Berhasil diUpdate");
+            setVisible(false);
+        }
     }//GEN-LAST:event_btnProsesActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

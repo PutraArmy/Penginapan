@@ -294,17 +294,20 @@ public class bookingView extends javax.swing.JFrame {
         System.out.println(JK);
         int l = (int) lama;
         int h = (int) harga;
-        dbCus.tambah_customer(new customer(txtNama.getText(), txtNoIdentitas.getText(),txtAlamat.getText(),JK,txtEmail.getText(),txtUsia.getText()));
-        dbBooking.tambah_booking(new booking(dbCus.getId_customer(), ID,tglcheckIn,tglcheckOut,l,h));
-        dbRoom.status_booked(ID);
-        JOptionPane.showMessageDialog(null, "Room Sucesfull to Booked");
-        setVisible(false);
-        cek();
+        if (txtNama.getText() == null || txtNoIdentitas.getText() == null || txtAlamat.getText() == null ||txtEmail.getText() == null ||txtUsia.getText() == null ||class_room == null ||
+            tglcheckIn == null ||tglcheckOut == null ||l == 0 ||h == 0){
+            JOptionPane.showMessageDialog(null, "Harap Isi semua Form");
+        }else{
+            dbCus.tambah_customer(new customer(txtNama.getText(), txtNoIdentitas.getText(),txtAlamat.getText(),JK,txtEmail.getText(),txtUsia.getText()));
+            dbBooking.tambah_booking(new booking(dbCus.getId_customer(), ID,tglcheckIn,tglcheckOut,l,h));
+            dbRoom.status_booked(ID);
+            JOptionPane.showMessageDialog(null, "Room Sucesfull to Booked");
+            setVisible(false);
+            
+        }
     }//GEN-LAST:event_btnProsesActionPerformed
 
-    public boolean cek(){
-        return true;
-    }
+    
     private void txtNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNamaActionPerformed
