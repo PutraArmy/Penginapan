@@ -58,9 +58,7 @@ public class CheckInView extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1000, 600));
         setMinimumSize(new java.awt.Dimension(1000, 600));
-        setPreferredSize(new java.awt.Dimension(1000, 600));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -72,7 +70,7 @@ public class CheckInView extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
         jLabel2.setText("Order ID");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 70, -1));
-        getContentPane().add(txtIDBooking, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 140, -1));
+        getContentPane().add(txtIDBooking, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 150, -1));
 
         btnSearch.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
         btnSearch.setText("Search");
@@ -81,7 +79,7 @@ public class CheckInView extends javax.swing.JFrame {
                 btnSearchActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, -1, 20));
+        getContentPane().add(btnSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, -1, 20));
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
         jLabel3.setText("ID Customer");
@@ -93,15 +91,15 @@ public class CheckInView extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 12)); // NOI18N
         jLabel5.setText("ID Room");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
         jLabel6.setText("No Room");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 360, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 360, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
         jLabel7.setText("Class Room");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 360, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 420, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
         jLabel8.setText("Check In");
@@ -120,15 +118,15 @@ public class CheckInView extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, 230, -1));
-        getContentPane().add(txtIDRoom, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, 74, -1));
-        getContentPane().add(txtNoRoom, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 74, -1));
+        getContentPane().add(txtIDRoom, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 380, 74, -1));
+        getContentPane().add(txtNoRoom, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 380, 74, -1));
 
         txtClassRoom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtClassRoomActionPerformed(evt);
             }
         });
-        getContentPane().add(txtClassRoom, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 380, 74, -1));
+        getContentPane().add(txtClassRoom, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 440, 74, -1));
 
         jLabel9.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
         jLabel9.setText("Check Out");
@@ -149,7 +147,7 @@ public class CheckInView extends javax.swing.JFrame {
                 btnProsesActionPerformed(evt);
             }
         });
-        getContentPane().add(btnProses, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 430, 87, -1));
+        getContentPane().add(btnProses, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 430, 87, -1));
 
         btnBatal.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 12)); // NOI18N
         btnBatal.setText("Cancel");
@@ -158,7 +156,7 @@ public class CheckInView extends javax.swing.JFrame {
                 btnBatalActionPerformed(evt);
             }
         });
-        getContentPane().add(btnBatal, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 430, 76, -1));
+        getContentPane().add(btnBatal, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 430, 76, -1));
         getContentPane().add(txtCheckIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 200, 128, -1));
 
         txtCheckOut.addActionListener(new java.awt.event.ActionListener() {
