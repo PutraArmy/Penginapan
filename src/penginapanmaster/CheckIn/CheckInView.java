@@ -8,7 +8,6 @@ package penginapanmaster.CheckIn;
 
 import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
-import penginapanmaster.Booking.DatabaseBooking;
 
 /**
  *
@@ -114,6 +113,11 @@ public class CheckInView extends javax.swing.JFrame {
         });
 
         btnBatal.setText("Batal");
+        btnBatal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBatalActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -237,10 +241,10 @@ public class CheckInView extends javax.swing.JFrame {
        txtCheckIn.setText(String.valueOf(dt.getCheck_in()));
        txtCheckOut.setText(String.valueOf(dt.getCheck_out()));
        txtClassRoom.setText(String.valueOf(dt.getClass_room()));
-       txtLama.setText(String.valueOf(dt.getId_customer()));
-       txtNama.setText(String.valueOf(dt.getId_customer()));
-       txtNoRoom.setText(String.valueOf(dt.getId_customer()));
-       txtTotal.setText(String.valueOf(dt.getId_customer()));
+       txtLama.setText(String.valueOf(dt.getLama()));
+       txtNama.setText(String.valueOf(dt.getNama()));
+       txtNoRoom.setText(String.valueOf(dt.getNo_room()));
+       txtTotal.setText(String.valueOf(dt.getTotal()));
        
     }//GEN-LAST:event_btnSearchActionPerformed
 
@@ -264,6 +268,11 @@ public class CheckInView extends javax.swing.JFrame {
     private void txtClassRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtClassRoomActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtClassRoomActionPerformed
+
+    private void btnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatalActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+    }//GEN-LAST:event_btnBatalActionPerformed
 
    
 

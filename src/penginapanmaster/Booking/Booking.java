@@ -5,8 +5,6 @@
  */
 package penginapanmaster.Booking;
 
-import java.util.Date;
-
 /**
  *
  * @author Army

@@ -5,6 +5,10 @@
  */
 package penginapanmaster;
 
+import penginapanmaster.Booking.BookingPresenter;
+import penginapanmaster.CheckIn.CheckInPresenter;
+import penginapanmaster.CheckOut.CheckOutPresenter;
+
 /**
  *
  * @author Lukman
@@ -42,7 +46,6 @@ public class MainView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1000, 600));
-        setPreferredSize(new java.awt.Dimension(1000, 600));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -82,10 +85,20 @@ public class MainView extends javax.swing.JFrame {
         bBooking.setBounds(250, 230, 110, 110);
 
         bCheckin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/checkin.png"))); // NOI18N
+        bCheckin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCheckinActionPerformed(evt);
+            }
+        });
         getContentPane().add(bCheckin);
         bCheckin.setBounds(430, 230, 110, 110);
 
         bCheckout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/checkout.png"))); // NOI18N
+        bCheckout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCheckoutActionPerformed(evt);
+            }
+        });
         getContentPane().add(bCheckout);
         bCheckout.setBounds(430, 350, 110, 110);
 
@@ -120,8 +133,8 @@ public class MainView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAdminActionPerformed
-        CheckInView fProses = new CheckInView(this,true);
-        fProses.setVisible(true);
+        AdminLogin al = new AdminLogin();
+        al.setVisible(true);
         //fProses.tnim.setText("");
         //fProses.tnama.setText("");
         //fProses.tjk.setText("");
@@ -131,11 +144,22 @@ public class MainView extends javax.swing.JFrame {
 
     private void bBookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBookingActionPerformed
         // TODO add your handling code here:
+        BookingPresenter.getBooking();
     }//GEN-LAST:event_bBookingActionPerformed
 
     private void bCustomerserviceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCustomerserviceActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bCustomerserviceActionPerformed
+
+    private void bCheckinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCheckinActionPerformed
+        // TODO add your handling code here:
+        CheckInPresenter.getCheckIn();
+    }//GEN-LAST:event_bCheckinActionPerformed
+
+    private void bCheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCheckoutActionPerformed
+        // TODO add your handling code here:
+        CheckOutPresenter.getCheckOut();
+    }//GEN-LAST:event_bCheckoutActionPerformed
 
     
     /**
